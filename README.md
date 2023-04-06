@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Remote
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technology companies that allow remote work in France.
 
-## Available Scripts
+| name   | description                                                                                                        | isEnglish | isRemote | isHybrid | isHiring |
+| ------ | ------------------------------------------------------------------------------------------------------------------ | --------- | -------- | -------- | -------- |
+| Espano | This startup is focused on developing and implementing cutting-edge technologies using creative coding techniques. | true      | true     | true     | true     |
 
-In the project directory, you can run:
+## Contributing
 
-### `npm start`
+Pull requests are absolutely welcome.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please make sure the following condition are met to add your company to the list:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   Based in France
+-   Technology related
+-   Allow full/partial remote work
 
-### `npm test`
+Please add the company information to the following files
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   [README.md](https://github.com/ParmentierChristophe/remote-in-france/blob/main/README.md)
 
-### `npm run build`
+The companies are automatically generated from the README.md so you don't need to create separate files yourself.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[**via this link, you will find how to make a Pull request to add your company**]()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### About Full Remote
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We took the liberty to define full remote as follows:
 
-### `npm run eject`
+-   All staff can work remote.
+    -   Must apply to _all staff_ for full remote consideration.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*   Workplace is flexible by definition.
+    -   Must allow remote work all week
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### English Friendly
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+We define the term "English Friendly" as
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   people who are only able to use English (i.e. very little or no French) to perform all the tasks required for a job.
 
-## Learn More
+### About Hybrid Working
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We took the liberty of defining hybrid operation as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   All staff can work remotely.
+    -   Must apply to _all staff_ for full remote review.
+
+*   The workplace is flexible by definition.
+    -   Must allow remote work up to 2-3 days per week.
+
+### About is Hiring
+
+We define the term "is hiring" as
+
+-   companies that are currently hiring (try to update your company in the README.md please)
