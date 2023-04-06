@@ -1,0 +1,30 @@
+name: Run JS script on merge to main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-js-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout main branch
+      uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.x'
+    - name: Set file permissions
+      run: chmod +w ./src/core/infra/data/data.json
+    - name: Run JS script
+      run: node .github/scripts/script.js
+    - name: Add & Commit
+      uses: EndBug/add-and-commit@v9.1.1
+      with:
+        author_name: ParmentierChristophe
+        author_email: i-tof@laposte.net
+        message: "add new Company"
+
