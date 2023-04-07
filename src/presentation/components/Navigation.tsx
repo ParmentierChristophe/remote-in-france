@@ -1,5 +1,6 @@
 import { Flex, Link, Heading, ButtonGroup, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { Link as RLink } from 'react-router-dom';
 
 export function Navigation() {
 	return (
@@ -13,7 +14,7 @@ export function Navigation() {
 			bgColor="white"
 		>
 			<Flex>
-				<Link href="/">
+				<Link as={RLink} to={'/'}>
 					<Flex as="a">
 						<Heading
 							size={{ base: 'md', md: 'lg', lg: 'xl' }}
