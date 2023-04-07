@@ -22,7 +22,7 @@ Please add the company information to the following files
 
 The companies are automatically generated from the README.md so you don't need to create separate files yourself.
 
-[**via this link, you will find how to make a Pull request to add your company**]()
+[**via this link, you will find how to make a Pull request to add your company**](https://github.com/ParmentierChristophe/remote-in-france/pull/1)
 
 ### About Full Remote
 
