@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Espano",
+    "description": "This startup is focused on developing and implementing cutting-edge technologies using creative coding techniques.",
+    "isEnglish": true,
+    "isRemote": true,
+    "isHybrid": true,
+    "isHiring": true,
+    "id": 1
+  }
+]

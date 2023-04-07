@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/inversify": "^2.0.33",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
   }
 }
