@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { CompanyList } from './presentation/pages/CompanyList';
 import { Provider } from 'inversify-react';
 import 'reflect-metadata';

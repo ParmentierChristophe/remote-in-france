@@ -1,4 +1,3 @@
-import '../../App.css';
 import { Flex } from '@chakra-ui/react';
 import { useCompanies } from '../hooks/useCompanies';
 import { Company } from '../../core/domain/entities/company.entity';
