@@ -24,7 +24,7 @@ export function Card({
 	const navigate = useNavigate();
 
 	const handleClick = () => {
-		navigate(`remote-in-france/company/${companyId}`);
+		navigate(`/company/${companyId}`);
 	};
 
 	let boxBg = useColorModeValue('white !important', '#111c44 !important');

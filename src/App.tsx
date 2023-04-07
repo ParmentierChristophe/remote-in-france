@@ -16,12 +16,9 @@ function App() {
 				<Provider container={container}>
 					<Navigation />
 					<Routes>
+						<Route path="/" element={<CompanyList />} />
 						<Route
-							path="/remote-in-france"
-							element={<CompanyList />}
-						/>
-						<Route
-							path="remote-in-france/company/:companyId"
+							path="/company/:companyId"
 							element={<CompanyDetail />}
 						/>
 					</Routes>
