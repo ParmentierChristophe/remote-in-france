@@ -5,28 +5,29 @@ import 'reflect-metadata';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import { Navigation } from './presentation/components/Navigation';
 import { Footer } from './presentation/components/Footer';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { CompanyDetail } from './presentation/pages/CompanyDetail';
 import { container } from './core/infra/config/config';
 
 function App() {
 	return (
 		<div>
-			<HashRouter>
-				<ChakraProvider theme={theme} resetCSS={false}>
-					<Provider container={container}>
-						<Navigation />
-						<Routes>
-							<Route path="/" element={<CompanyList />} />
-							<Route
-								path="company/:companyId"
-								element={<CompanyDetail />}
-							/>
-						</Routes>
-						<Footer />
-					</Provider>
-				</ChakraProvider>
-			</HashRouter>
+			<ChakraProvider theme={theme} resetCSS={false}>
+				<Provider container={container}>
+					<Navigation />
+					<Routes>
+						<Route
+							path="/remote-in-france"
+							element={<CompanyList />}
+						/>
+						<Route
+							path="remote-in-france/company/:companyId"
+							element={<CompanyDetail />}
+						/>
+					</Routes>
+					<Footer />
+				</Provider>
+			</ChakraProvider>
 		</div>
 	);
 }

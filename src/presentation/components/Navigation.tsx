@@ -13,7 +13,7 @@ export function Navigation() {
 			bgColor="white"
 		>
 			<Flex>
-				<Link href="/">
+				<Link href="/remote-in-france">
 					<Flex as="a">
 						<Heading
 							size={{ base: 'md', md: 'lg', lg: 'xl' }}
