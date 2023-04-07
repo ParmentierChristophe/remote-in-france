@@ -5,16 +5,16 @@ import 'reflect-metadata';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import { Navigation } from './presentation/components/Navigation';
 import { Footer } from './presentation/components/Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { CompanyDetail } from './presentation/pages/CompanyDetail';
 import { container } from './core/infra/config/config';
 
 function App() {
 	return (
 		<div>
-			<ChakraProvider theme={theme} resetCSS={false}>
-				<Provider container={container}>
-					<BrowserRouter>
+			<HashRouter>
+				<ChakraProvider theme={theme} resetCSS={false}>
+					<Provider container={container}>
 						<Navigation />
 						<Routes>
 							<Route path="/" element={<CompanyList />} />
@@ -24,9 +24,9 @@ function App() {
 							/>
 						</Routes>
 						<Footer />
-					</BrowserRouter>
-				</Provider>
-			</ChakraProvider>
+					</Provider>
+				</ChakraProvider>
+			</HashRouter>
 		</div>
 	);
 }
