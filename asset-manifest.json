@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/remote-in-france/static/css/main.e6c13ad2.css",
-    "main.js": "/remote-in-france/static/js/main.2977beb1.js",
+    "main.js": "/remote-in-france/static/js/main.cf00796c.js",
     "static/js/787.b1edffa9.chunk.js": "/remote-in-france/static/js/787.b1edffa9.chunk.js",
     "index.html": "/remote-in-france/index.html",
     "main.e6c13ad2.css.map": "/remote-in-france/static/css/main.e6c13ad2.css.map",
-    "main.2977beb1.js.map": "/remote-in-france/static/js/main.2977beb1.js.map",
+    "main.cf00796c.js.map": "/remote-in-france/static/js/main.cf00796c.js.map",
     "787.b1edffa9.chunk.js.map": "/remote-in-france/static/js/787.b1edffa9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2977beb1.js"
+    "static/js/main.cf00796c.js"
   ]
 }
