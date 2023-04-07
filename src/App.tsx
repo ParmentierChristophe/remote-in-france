@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CompanyList } from './presentation/pages/CompanyList';
+import { Provider } from 'inversify-react';
+import 'reflect-metadata';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { Navigation } from './presentation/components/Navigation';
+import { Footer } from './presentation/components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CompanyDetail } from './presentation/pages/CompanyDetail';
+import { container } from './core/infra/config/config';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<ChakraProvider theme={theme} resetCSS={false}>
+				<Provider container={container}>
+					<BrowserRouter>
+						<Navigation />
+						<Routes>
+							<Route path="/" element={<CompanyList />} />
+							<Route
+								path="company/:companyId"
+								element={<CompanyDetail />}
+							/>
+						</Routes>
+						<Footer />
+					</BrowserRouter>
+				</Provider>
+			</ChakraProvider>
+		</div>
+	);
 }
 
 export default App;

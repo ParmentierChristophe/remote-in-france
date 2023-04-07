@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import { injectable } from 'inversify';
-import { Company } from '../domain/entities/company.entity';
-import { CompanyRepository } from '../domain/repositories/company.repository';
+import type { CompanyRepository } from '../domain/repositories/company.repository';
 import { container } from '../infra/config/config';
+import { Company } from '../domain/entities/company.entity';
 
 @injectable()
 export class GetCompanies {
