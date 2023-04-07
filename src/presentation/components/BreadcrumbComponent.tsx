@@ -14,11 +14,7 @@ export function BreadcrumbComponent({ text }: IBreadcrumbItemPropsProps) {
 	return (
 		<Breadcrumb>
 			<BreadcrumbItem>
-				<BreadcrumbLink
-					as={Link}
-					to={'/remote-in-france'}
-					fontWeight="bold"
-				>
+				<BreadcrumbLink as={Link} to={'/'} fontWeight="bold">
 					Home
 				</BreadcrumbLink>
 			</BreadcrumbItem>
