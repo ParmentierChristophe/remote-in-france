@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/ParmentierChristophe/remote-in-france",
   "name": "remote-in-france",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,9 @@
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "@types/inversify": "^2.0.33",
+    "gh-pages": "^5.0.0",
     "inversify": "^6.0.1",
     "reflect-metadata": "^0.1.13"
   }
