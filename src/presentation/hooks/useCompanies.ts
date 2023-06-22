@@ -1,21 +1,24 @@
 import { useEffect, useState } from 'react';
-import { GetCompanies } from '../../core/application/getCompanies';
 import { Company } from '../../core/domain/entities/company.entity';
-import { container } from '../../core/infra/config/config';
+import { useInjection } from 'inversify-react';
+import { CompanyRepository } from '../../core/domain/repositories/company.repository';
 
 export function useCompanies() {
 	const [companies, setCompanies] = useState<Company[]>([]);
 	const [loading, setLoading] = useState<boolean>(true);
 
+	const companyRepository =
+		useInjection<CompanyRepository>('CompanyRepository');
+
 	useEffect(() => {
 		async function fetchCompanies() {
-			const getCompanies = container.resolve<GetCompanies>(GetCompanies);
-			getCompanies.execute().then((companies) => setCompanies(companies));
+			const companies = await companyRepository.getAllCompanies();
+			setCompanies(companies);
 			setLoading(false);
 		}
 
 		fetchCompanies();
-	}, []);
+	}, [companyRepository]);
 
 	return { companies, loading };
 }
