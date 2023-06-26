@@ -2,9 +2,10 @@
 
 Technology companies that allow remote work in France.
 
-| name   | description                                                                                                        | isEnglish | isRemote | isHybrid | isHiring |
-| ------ | ------------------------------------------------------------------------------------------------------------------ | --------- | -------- | -------- | -------- |
-| Espano | This startup is focused on developing and implementing cutting-edge technologies using creative coding techniques. | true      | true     | true     | true     |
+| name           | description                                                                                                        | isEnglish | isRemote | isHybrid | isHiring |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ | --------- | -------- | -------- | -------- |
+| Espano         | This startup is focused on developing and implementing cutting-edge technologies using creative coding techniques. | true      | true     | true     | true     |
+| My New Company | Awesome My New Company description.                                                                                | true      | true     | false    | true     |
 
 ## Contributing
 
