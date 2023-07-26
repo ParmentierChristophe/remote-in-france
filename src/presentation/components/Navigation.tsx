@@ -12,7 +12,8 @@ export function Navigation() {
 			pl={{ base: '24', md: '40', lg: '56' }}
 			py="12"
 			bgColor="white"
-		>
+			data-testid="navigation"
+	>
 			<Flex>
 				<Link as={RLink} to={'/'}>
 					<Flex as="a">
