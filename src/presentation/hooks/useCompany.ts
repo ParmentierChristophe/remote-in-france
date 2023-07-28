@@ -11,12 +11,12 @@ export function useCompany(companyId: string) {
 		useInjection<CompanyRepository>('CompanyRepository');
 
 	useEffect(() => {
-		async function fetchCompany() {
+		async function fetchCompanies() {
 			const company = await companyRepository.getCompany(companyId);
 			setCompany(company);
 			setLoading(false);
 		}
-		fetchCompany();
+		fetchCompanies();
 	}, [companyRepository, companyId]);
 
 	return { company, loading };

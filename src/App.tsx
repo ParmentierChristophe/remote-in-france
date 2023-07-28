@@ -13,7 +13,7 @@ function App() {
 	return (
 		<div>
 			<ChakraProvider theme={theme} resetCSS={false}>
-				<Provider container={container} standalone={true}>
+				<Provider container={container}>
 					<Navigation />
 					<Routes>
 						<Route path="/" element={<CompanyList />} />
@@ -22,7 +22,7 @@ function App() {
 							element={<CompanyDetail />}
 						/>
 					</Routes>
-					<Footer data-testid="footer"/>
+					<Footer />
 				</Provider>
 			</ChakraProvider>
 		</div>
