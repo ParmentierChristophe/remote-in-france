@@ -1,5 +1,4 @@
 import {useCompany} from './useCompany';
-import {CompanyRepository} from '../../core/domain/repositories/company.repository';
 import {Company} from "../../core/domain/entities/company.entity";
 import {renderHook, waitFor} from "@testing-library/react";
 
@@ -15,16 +14,15 @@ const mockCompany: Company = {
     isHiring: true,
 };
 
-const mockCompanyRepository: CompanyRepository = {
-    getAllCompanies: async () => [mockCompany],
+const mockCompanyUseCase = {
     getCompany: async (id: string) => (id === companyId.toString() ? mockCompany : undefined),
 };
 
 jest.mock('inversify-react', () => ({
-    useInjection: () => mockCompanyRepository,
+    useInjection: () => mockCompanyUseCase,
 }));
-test('useCompany returns company and loading state', async () => {
 
+test('useCompany returns company and loading state', async () => {
     const {result} = renderHook(() => useCompany(companyId.toString()));
 
     expect(result.current.company).toBeUndefined();
