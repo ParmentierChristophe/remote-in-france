@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react';
-import { Company } from '../../core/domain/entities/company.entity';
-import { useInjection } from 'inversify-react';
-import { CompanyRepository } from '../../core/domain/repositories/company.repository';
+import {useEffect, useState} from 'react';
+import {Company} from '../../core/domain/entities/company.entity';
+import {useInjection} from 'inversify-react';
+import {ICompanyUseCase} from "../../core/application/use-cases/companyUseCase";
 
 export function useCompany(companyId: string) {
-	const [company, setCompany] = useState<Company | undefined>(undefined);
-	const [loading, setLoading] = useState<boolean>(true);
+    const [company, setCompany] = useState<Company | undefined>(undefined);
+    const [loading, setLoading] = useState<boolean>(true);
+    const companyUseCase =
+        useInjection<ICompanyUseCase>('ICompanyUseCase');
 
-	const companyRepository =
-		useInjection<CompanyRepository>('CompanyRepository');
+    useEffect(() => {
+        async function fetchCompany() {
+            const company = await companyUseCase.getCompany(companyId);
+            setCompany(company);
+            setLoading(false);
+        }
 
-	useEffect(() => {
-		async function fetchCompany() {
-			const company = await companyRepository.getCompany(companyId);
-			setCompany(company);
-			setLoading(false);
-		}
-		fetchCompany();
-	}, [companyRepository, companyId]);
+        fetchCompany();
+    }, [companyUseCase, companyId]);
 
-	return { company, loading };
+    return {company, loading};
 }
