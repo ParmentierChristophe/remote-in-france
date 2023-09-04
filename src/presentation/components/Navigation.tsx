@@ -1,4 +1,4 @@
-import {Flex, Link, Heading, ButtonGroup, chakra} from '@chakra-ui/react';
+import {ButtonGroup, chakra, Flex, Heading, Link} from '@chakra-ui/react';
 import React from 'react';
 import {Link as RLink} from 'react-router-dom';
 import SearchBar from "./SearchBar";

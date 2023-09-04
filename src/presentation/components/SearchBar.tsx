@@ -1,7 +1,16 @@
 import {SearchIcon} from '@chakra-ui/icons';
 import {
-    Box, Card, CardBody, CardHeader, Heading, Input, InputGroup, InputLeftElement,
-    Link, StackDivider, VStack
+    Box,
+    Card,
+    CardBody,
+    CardHeader,
+    Heading,
+    Input,
+    InputGroup,
+    InputLeftElement,
+    Link,
+    StackDivider,
+    VStack
 } from '@chakra-ui/react';
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
