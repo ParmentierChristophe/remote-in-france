@@ -13,7 +13,7 @@ function App() {
     return (
         <div>
             <ChakraProvider theme={theme} resetCSS={false}>
-                <Provider container={container} standalone={true}>
+                <Provider container={container} standalone={true} key={container.id}>
                     <Navigation/>
                     <Routes>
                         <Route path="/" element={<CompanyList/>}/>
