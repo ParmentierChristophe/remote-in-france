@@ -8,25 +8,23 @@ export function Navigation() {
     return (
         <chakra.nav
             h="16"
+            m={"auto"}
             display="flex"
             alignItems="center"
             justifyContent="space-between"
-            pl={{base: '24', md: '40', lg: '56'}}
             py="12"
             bgColor="white"
             data-testid="navigation"
-            width={"60%"}
+            width={"95%"}
         >
             <Flex>
                 <Link as={RLink} to={'/'}>
-                    <Flex as="a">
                         <Heading
                             size={{base: 'md', md: 'lg', lg: 'xl'}}
                             fontWeight="bold"
                         >
                             Remote in France
                         </Heading>
-                    </Flex>
                 </Link>
             </Flex>
             <Flex justify="center">

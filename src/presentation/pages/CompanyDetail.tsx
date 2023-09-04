@@ -14,13 +14,12 @@ export function CompanyDetail() {
     }
 
     return (
-        <Container maxW="4xl">
+        <Container maxW="4xl" w={"90%"}>
             <BreadcrumbComponent text={data.company?.name}/>
-
             <Box m="16">
                 <h1>{data.company?.name}</h1>
                 <p>{data.company?.description}</p>
-                <Flex>
+                <Flex display="flex" flexWrap={"wrap"}>
                     {data.company?.isHiring ? (
                         <Label nameLabel="Hiring" bgColor="#614CFF"/>
                     ) : null}
