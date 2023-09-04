@@ -21,6 +21,7 @@ function SearchBar() {
     const navigate = useNavigate();
     const handleClick = (index: string) => {
         navigate(`/company/${index}`);
+        setQuery('');
     };
     return (
         <div className="container">
@@ -51,7 +52,7 @@ function SearchBar() {
                         </CardHeader>
 
                         {searchResults.map((result, index) => (
-                            <Link onClick={() => handleClick(result.id.toString())}>
+                            <Link key={result.id} onClick={() => handleClick(result.id.toString())}>
                                 <CardBody>
                                     <VStack divider={<StackDivider borderColor='gray.200'/>} spacing='4'>
                                         <Box>

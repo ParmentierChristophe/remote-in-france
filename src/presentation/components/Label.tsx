@@ -8,7 +8,7 @@ interface LabelProps {
 
 export function Label({nameLabel, bgColor, textColor}: LabelProps) {
     return (
-        <Box mx="1" borderRadius="20px" backgroundColor={bgColor}>
+        <Box mx="1" m={'5px'} borderRadius="20px" backgroundColor={bgColor}>
             <Text
                 textAlign="center"
                 color={textColor ? textColor : 'white'}
