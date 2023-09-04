@@ -1,7 +1,8 @@
-import {ButtonGroup, chakra, Flex, Heading, Link} from '@chakra-ui/react';
+import {ButtonGroup, chakra, Flex, Heading, Icon, Link} from '@chakra-ui/react';
 import React from 'react';
 import {Link as RLink} from 'react-router-dom';
-import SearchBar from "./SearchBar";
+import {AiFillGithub, AiFillLinkedin, AiFillTwitterCircle} from 'react-icons/ai';
+import SearchBar from './SearchBar';
 
 export function Navigation() {
     return (
@@ -14,6 +15,7 @@ export function Navigation() {
             py="12"
             bgColor="white"
             data-testid="navigation"
+            width={"60%"}
         >
             <Flex>
                 <Link as={RLink} to={'/'}>
@@ -31,7 +33,17 @@ export function Navigation() {
                 <SearchBar/>
             </Flex>
             <Flex justify="right">
-                <ButtonGroup alignItems="center"></ButtonGroup>
+                <ButtonGroup paddingLeft={"10px"} alignItems="center">
+                    <Link href="https://github.com/ParmentierChristophe/remote-in-france" isExternal>
+                        <Icon boxSize={6} as={AiFillGithub}/>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/christophe-parmentier/" isExternal>
+                        <Icon boxSize={6} as={AiFillLinkedin}/>
+                    </Link>
+                    <Link href="https://twitter.com/theCrispydesign" isExternal>
+                        <Icon boxSize={6} as={AiFillTwitterCircle}/>
+                    </Link>
+                </ButtonGroup>
             </Flex>
         </chakra.nav>
     );
