@@ -1,35 +1,38 @@
-import { Flex, Link, Heading, ButtonGroup, chakra } from '@chakra-ui/react';
+import {ButtonGroup, chakra, Flex, Heading, Link} from '@chakra-ui/react';
 import React from 'react';
-import { Link as RLink } from 'react-router-dom';
+import {Link as RLink} from 'react-router-dom';
+import SearchBar from "./SearchBar";
 
 export function Navigation() {
-	return (
-		<chakra.nav
-			h="16"
-			display="flex"
-			alignItems="center"
-			justifyContent="space-between"
-			pl={{ base: '24', md: '40', lg: '56' }}
-			py="12"
-			bgColor="white"
-			data-testid="navigation"
-		>
-			<Flex>
-				<Link as={RLink} to={'/'}>
-					<Flex as="a">
-						<Heading
-							size={{ base: 'md', md: 'lg', lg: 'xl' }}
-							fontWeight="bold"
-						>
-							Remote in France
-						</Heading>
-					</Flex>
-				</Link>
-			</Flex>
-			<Flex justify="center"></Flex>
-			<Flex justify="right">
-				<ButtonGroup alignItems="center"></ButtonGroup>
-			</Flex>
-		</chakra.nav>
-	);
+    return (
+        <chakra.nav
+            h="16"
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            pl={{base: '24', md: '40', lg: '56'}}
+            py="12"
+            bgColor="white"
+            data-testid="navigation"
+        >
+            <Flex>
+                <Link as={RLink} to={'/'}>
+                    <Flex as="a">
+                        <Heading
+                            size={{base: 'md', md: 'lg', lg: 'xl'}}
+                            fontWeight="bold"
+                        >
+                            Remote in France
+                        </Heading>
+                    </Flex>
+                </Link>
+            </Flex>
+            <Flex justify="center">
+                <SearchBar/>
+            </Flex>
+            <Flex justify="right">
+                <ButtonGroup alignItems="center"></ButtonGroup>
+            </Flex>
+        </chakra.nav>
+    );
 }

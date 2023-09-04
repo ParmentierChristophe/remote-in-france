@@ -1,5 +1,5 @@
-import { injectable } from 'inversify';
 import 'reflect-metadata';
+import { injectable } from 'inversify';
 import { Company } from '../../domain/entities/company.entity';
 import { CompanyRepository } from '../../domain/repositories/company.repository';
 import data from '../data/data.json';
