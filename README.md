@@ -5,6 +5,7 @@ Technology companies that allow remote work in France.
 | name   | description                                                                                                        | isEnglish | isRemote | isHybrid | isHiring |
 | ------ | ------------------------------------------------------------------------------------------------------------------ | --------- | -------- | -------- | -------- |
 | Espano | This startup is focused on developing and implementing cutting-edge technologies using creative coding techniques. | true      | true     | true     | true     |
+| Max Digital Services Lyon | A digital services company (ESN) based on a collaborative model: management 3.0 applied to a services company!. | false      | false     | true     | true     |
 
 ## Contributing
 
